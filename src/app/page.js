@@ -2,68 +2,25 @@ import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>
-            To get started, edit the{" "}
-            <code className={styles.code}>page.js</code> file.
-          </h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+
+
+    return (
+        <>
+            <main className={styles.main}>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, modi labore! Eius consequatur quibusdam est odit laudantium possimus nam delectus, tempore eaque vel fuga. Possimus, quisquam? Quibusdam, a est! Iusto?
+                Minima vero omnis beatae impedit porro hic, quibusdam adipisci officia labore aspernatur sapiente molestiae tempore eum sint repellendus eligendi? Quis architecto eos iure exercitationem esse maxime laudantium est consequatur debitis!
+                Distinctio error ducimus optio quam tempora magni eaque laudantium adipisci, eligendi perspiciatis, ipsa nobis consequatur tenetur assumenda veritatis asperiores eius ab obcaecati deserunt. Impedit asperiores eos voluptatum quasi inventore minima!
+                Tempore quia aliquid eligendi odit, minima a? Minus nobis ullam maxime, rem et quod in modi odio molestiae accusamus animi eaque vitae id nemo quia unde velit nostrum fuga expedita.
+                Fuga sequi, obcaecati quod corrupti modi minus ab adipisci exercitationem velit neque sit ducimus nesciunt distinctio nulla enim porro quaerat similique vitae iure commodi eum amet at? Sint, omnis laudantium.
+                Ullam atque voluptatem mollitia, natus culpa, aliquam suscipit veniam eaque aspernatur nihil similique veritatis, ad hic incidunt molestias! Nulla laboriosam fugit nihil, quo alias architecto magni veniam pariatur placeat libero!
+                Temporibus maxime quidem, possimus et est vitae eligendi modi reprehenderit hic, voluptates magnam. Odio, iure illo minus omnis repellat veniam maxime cum nostrum molestiae asperiores, eius quisquam saepe error obcaecati.
+                Incidunt laborum odio omnis. Repellendus suscipit expedita eius distinctio a aspernatur, repudiandae excepturi facere ipsa? Repudiandae est fugit placeat, voluptatibus aspernatur consequatur nihil! Officia beatae suscipit quis placeat, vero delectus!
+                Dolorem possimus cum beatae esse omnis illum, exercitationem eum explicabo assumenda cupiditate, incidunt magnam doloremque veniam, optio reiciendis commodi obcaecati? Odio nemo fuga maiores repellat. Temporibus consectetur obcaecati qui est.
+                Voluptatibus illo exercitationem iusto architecto nobis eius provident fugiat nesciunt accusamus modi voluptatem tempore aperiam facere quia, nam sunt ducimus eaque quasi incidunt molestias ut id? Natus perspiciatis minus laudantium?
+                Laudantium labore ea doloremque similique numquam, quasi sunt temporibus cupiditate optio officiis delectus aliquam at totam corporis iste alias facere consectetur eaque enim vel explicabo quas, fugit doloribus. Ullam, adipisci.
+                Veritatis molestiae ut necessitatibus rem velit illo dolores ea neque culpa voluptatem, quos obcaecati dolorum quod officiis maiores sit facere illum quaerat hic ipsam consequuntur sapiente libero vitae. Doloremque, animi.
+            </main>
+        </>
+    )
+
 }

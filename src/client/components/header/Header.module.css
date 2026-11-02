@@ -1,0 +1,25 @@
+.header {
+	color: var(--color-text-inverse);
+	background-color: var(--color-secondary);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: calc(var(--font-size-md) * 2);
+	padding: var(--space-lg);
+}
+
+.headerSuffix {
+	display: inline-flex;
+	font-size: var(--font-size-sm);
+	transform: translateY(6px);
+}
+
+.linkWrapper {
+	display: flex;
+	gap: var(--space-lg);
+	font-size: var(--font-size-md);
+}
+
+.active {
+	text-decoration: underline;
+}
