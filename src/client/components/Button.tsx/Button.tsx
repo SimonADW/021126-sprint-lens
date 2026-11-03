@@ -17,7 +17,7 @@ function Button({
 	const Tag = href ? "a" : "button";
 
 	return (
-		<Tag href={href} className={`${styles[variant]} ${styles.button}`}>
+		<Tag href={href} className={`${styles[variant]} ${styles.button}`} onClick={onClick}>
 			{children}
 		</Tag>
 	);
