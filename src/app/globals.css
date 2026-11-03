@@ -72,6 +72,10 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;  
+}
+
 /* Layout  */
 body {
   min-height: 100%;
@@ -86,4 +90,30 @@ main {
 	padding: var(--space-lg);
   flex-grow: 1;
   background-color: var(--color-tertiary);
+}
+
+/* ----------- Loader Skeletons --------- */
+.skeleton {
+  position: relative;
+  overflow: hidden;  
+}
+
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translate(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent, 
+    var(--color-text-inverse),
+    transparent
+  );
+  animation: shimmer 1500ms infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%)
+  }  
 }

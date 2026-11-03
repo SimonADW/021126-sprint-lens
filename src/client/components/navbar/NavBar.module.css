@@ -1,0 +1,17 @@
+
+.linkWrapper {
+	display: flex;
+	align-items: center;
+	gap: var(--space-lg);
+	font-size: var(--font-size-md);
+}
+
+.active {
+	text-decoration: underline;
+}
+
+.linkSkeleton {
+	height: var(--font-size-md);
+	width: 5rem;
+	border-radius: var(--radius-sm);
+}

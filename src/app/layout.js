@@ -1,8 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
 import Header from "@/client/components/header/Header";
 import Footer from "@/client/components/footer/Footer";
+import { Suspense } from "react";
 
 
 const geistSans = Geist({
@@ -25,7 +25,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
-        <Header />
+        <Suspense>
+          <Header />
+        </Suspense>
         <main>
           {children}
         </main>

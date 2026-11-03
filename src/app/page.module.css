@@ -1,0 +1,26 @@
+.welcomeSection {	
+	margin: auto;
+	max-width: 600px;
+	display: flex;
+	flex-direction: column;	
+	gap: var(--space-md);
+	padding: var(--space-md) var(--space-md) var(--space-lg) var(--space-md);
+	border-radius: var(--radius-md);
+	border: 1px solid var(--color-border);	
+}
+
+.imageWrapper {
+	position: relative;	
+	aspect-ratio: 16 / 9;	
+	min-width: 220px;
+}
+
+.welcomeContent {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-sm);
+}
+
+
+
+

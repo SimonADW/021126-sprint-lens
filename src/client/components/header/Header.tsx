@@ -1,25 +1,33 @@
-"use client"
-
 import Link from "next/link";
 import styles from "./Header.module.css";
-import { usePathname } from "next/navigation";
+import NavBar from "../navbar/NavBar";
+import { auth0 } from "@/shared/lib/auth0";
+import NavBarSkeleton from "../navbar/NavBarSkeleton";
+import { Suspense } from "react";
+import Button from "../Button.tsx/Button";
 
-function Header() {
-	const pathname = usePathname();
+async function Header() {
+	// Check if user is authenticated
+	const session = await auth0.getSession();
 
 	return (
 		<header className={styles.header}>
 			<Link href="/">
-				<div>
+				<div className={styles.headerBrand}>
 					Sprint Lens{" "}
 					<div className={styles.headerSuffix}>by SAW</div>
 				</div>
 			</Link>
 
-			<div className={styles.linkWrapper}>
-				<Link className={pathname === "/dashboard" ? styles.active : ""} href="/dashboard">Dashboard</Link>
-				<Link className={pathname === "/check-in" ? styles.active : ""} href="/check-in">Check In</Link>
-			</div>
+			{session ? (
+				<Suspense fallback={<NavBarSkeleton />}>
+					<NavBar />															
+				</Suspense>
+			) : (
+				<>
+				<Button tag="a" href="auth/login">Log In</Button>
+				</>
+			)}
 		</header>
 	);
 }
