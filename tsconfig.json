@@ -33,7 +33,7 @@
     "**/*.mts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/client/components/Button"  ],
   "exclude": [
     "node_modules"
   ]

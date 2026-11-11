@@ -1,10 +1,10 @@
 import Link from "next/link";
 import styles from "./Header.module.css";
-import NavBar from "../navbar/NavBar";
+import NavBar from "../NavBar/NavBar";
 import { auth0 } from "@/shared/lib/auth0";
-import NavBarSkeleton from "../navbar/NavBarSkeleton";
+import NavBarSkeleton from "../NavBar/NavBarSkeleton";
 import { Suspense } from "react";
-import Button from "../Button.tsx/Button";
+import Button from "../Button/Button";
 import { Roboto } from 'next/font/google'
 
 const roboto = Roboto({

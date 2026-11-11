@@ -1,5 +1,5 @@
 "use client";
-import Button from "@/client/components/Button.tsx/Button";
+import Button from "@/client/components/Button/Button";
 
 function Error({ error, retry }) {
 	return (

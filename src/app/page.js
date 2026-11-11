@@ -10,6 +10,7 @@ export default async function Home() {
       <section className={styles.welcomeSection}>
         <div className={styles.imageWrapper}>
           <Image fill src="/agence-olloweb-lens.avif"
+            loading="eager"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             alt="Closeup of lens - Photo by Agence Olloweb on Unsplash"
             title="Photo by Agence Olloweb on Unsplash" />

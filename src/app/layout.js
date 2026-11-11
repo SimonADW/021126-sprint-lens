@@ -1,7 +1,7 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Roboto } from "next/font/google";
 import "./globals.css";
-import Header from "@/client/components/header/Header";
-import Footer from "@/client/components/footer/Footer";
+import Header from "@/client/components/Header/Header";
+import Footer from "@/client/components/Footer/Footer";
 import { Suspense } from "react";
 
 
@@ -15,6 +15,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const roboto = Roboto({  
+  weight: '400',
+  subsets: ['latin'],
+})
+
 export const metadata = {
   title: "Sprint Lens by SAW",
   description: "Sprint Dashboard for Mood and ETAs",
@@ -23,7 +28,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
 
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable}`}>
       <body>
         <Suspense>
           <Header />

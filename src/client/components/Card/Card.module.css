@@ -1,0 +1,13 @@
+.card {
+	background: var(--color-surface);
+	border-radius: var(--radius-md);
+	padding: var(--space-md);
+}
+
+.card .iconWrapper {
+	margin-bottom: var(--space-lg);
+}
+
+.cardSkeleton {
+	min-height: 12rem;
+}

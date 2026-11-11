@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import styles from './NavBar.module.css'
-import Button from "../Button.tsx/Button";
+import Button from "../Button/Button";
 
 function NavBar() {	
 	const pathname = usePathname();
@@ -22,7 +22,7 @@ function NavBar() {
 			>
 				Check In
 			</Link>
-			<Button tag="a" href="/auth/logout">Log Out</Button>
+			<Button href="/auth/logout">Log Out</Button>
 		</div>
 	);
 }

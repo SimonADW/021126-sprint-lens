@@ -1,6 +1,14 @@
 import { auth0 } from "@/shared/lib/auth0";
 import { redirect } from "next/navigation";
 import styles from "./page.module.css";
+import Image from "next/image";
+import Card from "@/client/components/Card/Card";
+import CardSkeleton from "@/client/components/Card/CardSkeleton";
+import GlanseDash from "@/client/components/GlanseDash/GlanseDash";
+import { Suspense } from "react";
+import { Glasses, TriangleAlert, TriangleAlertIcon, UserGroup } from "lucide-react";
+import AttentionDash from "@/client/components/AttentionDash/AttentionDash";
+import TeamUpdateDash from "@/client/components/TeamUpdateDash/TeamUpdateDash";
 
 async function DashboardPage() {
 	const session = await auth0.getSession();
@@ -10,32 +18,41 @@ async function DashboardPage() {
 		<>
 			<section className={styles.dashboard}>
 				<div className={styles.dashboardHeader}>
-					<h1>Dashboard</h1>
-					<p>User: {session.user.given_name || session.user.name}</p>
+					<div className={styles.imageWrapper}>
+						<Image
+							src={"/paul-skorupskas-lens.jpg"}
+							alt="Holding a camera lens"
+							fill
+						/>
+					</div>
+					<div>
+						<h1>
+							Welcome{" "}
+							{session.user.given_name || session.user.name}
+						</h1>
+						<p>Here&apos;s todays Lens 🔍</p>
+					</div>
 				</div>
 
 				<div className={styles.dashboardContent}>
 					{/* Extract to components */}
-					<article className={styles.firstChild}>
-						<h2>At a glance</h2>
-						<p>Check Ins today: 5</p>
-						<p>Average Mood: 5</p>
-						<p>Not yet checked in: 2</p>
-					</article>
+					<Suspense fallback={<CardSkeleton />}>
+						<Card icon={<Glasses color="var(--color-success)" />}>
+							<GlanseDash />
+						</Card>
+					</Suspense>
 
-					<article>
-						<h2>Needs attention</h2>
-						<p>Blockers</p>
-						<ul></ul>
+					<Suspense fallback={<CardSkeleton />}>
+						<Card icon={<TriangleAlertIcon color="var(--color-warning)" />}>
+							<AttentionDash  />
+						</Card>
+					</Suspense>
 
-						<p>Moods</p>
-						<ul></ul>
-					</article>
-
-					<article>
-						<h2>Latest Team Updates</h2>
-						<ul></ul>
-					</article>
+					<Suspense fallback={<CardSkeleton />}>
+						<Card icon={<UserGroup color="var(--color-info)" />}>
+							<TeamUpdateDash  />
+						</Card>
+					</Suspense>
 				</div>
 			</section>
 		</>
