@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import holdingLensImage from "../../public//agence-olloweb-lens.avif"
 
 
 export default async function Home() {
@@ -9,9 +10,11 @@ export default async function Home() {
     <>
       <section className={styles.welcomeSection}>
         <div className={styles.imageWrapper}>
-          <Image fill src="/agence-olloweb-lens.avif"
-            loading="eager"
+          <Image
+            fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            src={holdingLensImage}
+            loading="eager"
             alt="Closeup of lens - Photo by Agence Olloweb on Unsplash"
             title="Photo by Agence Olloweb on Unsplash" />
         </div>

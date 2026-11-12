@@ -1,6 +1,7 @@
 .dashboard {	
 	margin: auto;	
-	max-width: 1200px;	
+	margin-bottom: var(--space-xl);
+	max-width: 1024px;	
 
 }
 
@@ -36,10 +37,7 @@
 	grid-template-columns: 1fr 2fr;
 	grid-template-rows: 1fr 1fr;	
 	gap: var(--space-md);		
+	height: 40rem;
 }
 
-.dashboardContent article:first-child {
-	grid-column: span 1;
-	grid-row: span 2;
-}
 

@@ -10,5 +10,6 @@ Whatever content is LLM generated, will be listed below:
 
 - CSS Variables
 - Mock data
+- Troubleshooting Grid layout for cards skeletons
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

@@ -1,14 +1,15 @@
-import { auth0 } from "@/shared/lib/auth0";
-import { redirect } from "next/navigation";
-import styles from "./page.module.css";
-import Image from "next/image";
+import AttentionDash from "@/client/components/AttentionDash/AttentionDash";
 import Card from "@/client/components/Card/Card";
 import CardSkeleton from "@/client/components/Card/CardSkeleton";
 import GlanseDash from "@/client/components/GlanseDash/GlanseDash";
-import { Suspense } from "react";
-import { Glasses, TriangleAlert, TriangleAlertIcon, UserGroup } from "lucide-react";
-import AttentionDash from "@/client/components/AttentionDash/AttentionDash";
 import TeamUpdateDash from "@/client/components/TeamUpdateDash/TeamUpdateDash";
+import { auth0 } from "@/shared/lib/auth0";
+import { Glasses, TriangleAlertIcon, UserGroup } from "lucide-react";
+import Image from "next/image";
+import { redirect } from "next/navigation";
+import { Suspense } from "react";
+import lensImage from "../../../public/paul-skorupskas-lens.jpg";
+import styles from "./page.module.css";
 
 async function DashboardPage() {
 	const session = await auth0.getSession();
@@ -20,9 +21,10 @@ async function DashboardPage() {
 				<div className={styles.dashboardHeader}>
 					<div className={styles.imageWrapper}>
 						<Image
-							src={"/paul-skorupskas-lens.jpg"}
+							src={lensImage}
 							alt="Holding a camera lens"
 							fill
+							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 						/>
 					</div>
 					<div>
@@ -36,21 +38,25 @@ async function DashboardPage() {
 
 				<div className={styles.dashboardContent}>
 					{/* Extract to components */}
-					<Suspense fallback={<CardSkeleton />}>
-						<Card icon={<Glasses color="var(--color-success)" />}>
+					<Suspense fallback={<CardSkeleton featured/>}>
+						<Card featured icon={<Glasses color="var(--color-success)" />}>
 							<GlanseDash />
 						</Card>
 					</Suspense>
 
 					<Suspense fallback={<CardSkeleton />}>
-						<Card icon={<TriangleAlertIcon color="var(--color-warning)" />}>
-							<AttentionDash  />
+						<Card
+							icon={
+								<TriangleAlertIcon color="var(--color-warning)" />
+							}
+						>
+							<AttentionDash />
 						</Card>
 					</Suspense>
 
 					<Suspense fallback={<CardSkeleton />}>
 						<Card icon={<UserGroup color="var(--color-info)" />}>
-							<TeamUpdateDash  />
+							<TeamUpdateDash />
 						</Card>
 					</Suspense>
 				</div>

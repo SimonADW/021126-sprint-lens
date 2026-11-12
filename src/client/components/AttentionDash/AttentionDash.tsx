@@ -6,7 +6,7 @@ import NumberBadge from "../NumberBadge/NumberBadge";
 
 function AttentionDash() {
 	const checkinsToday: number = use(
-		new Promise((res) => setTimeout(() => res(2), 2000)),
+		new Promise((res) => setTimeout(() => res(2), 500)),
 	);
 
 	return (
