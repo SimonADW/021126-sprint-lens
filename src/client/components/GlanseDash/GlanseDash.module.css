@@ -8,3 +8,7 @@
 	display: flex;
 	justify-content: space-between;
 }
+
+.cardHeading {
+	border-bottom: 1px solid var(--color-primary);
+}

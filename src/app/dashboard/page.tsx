@@ -15,6 +15,7 @@ async function DashboardPage() {
 	const session = await auth0.getSession();
 	if (!session) redirect("/auth/login");
 
+	const nameFromEmail = (session.user.email).split("@").slice(0, 1)
 	return (
 		<>
 			<section className={styles.dashboard}>
@@ -30,7 +31,7 @@ async function DashboardPage() {
 					<div>
 						<h1>
 							Welcome{" "}
-							{session.user.given_name || session.user.name}
+							{session.user.given_name || nameFromEmail}
 						</h1>
 						<p>Here&apos;s todays Lens 🔍</p>
 					</div>

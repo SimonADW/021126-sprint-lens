@@ -1,9 +1,9 @@
 
 :root {
   /* --- Colors --- */
-  --color-primary: #4f46e5;
-  --color-primary-hover: #4338ca;
-  --color-secondary: #1e293b;
+  --color-primary: #bd7518;
+  --color-primary-hover: #82530c;
+  --color-secondary: #e2e3e5;
   --color-secondary-hover: #0f172a;
   --color-tertiary: transparent;
   --color-tertiary-hover: #f1f5f9;
@@ -13,13 +13,13 @@
   --color-warning: #d97706;
   --color-info: #2563eb;
 
-  --color-text: #0f172a;
+  --color-text: #d1d2d5;
   --color-text-muted: #64748b;
-  --color-text-inverse: #ffffff;
+  --color-text-inverse: #131212;
 
-  --color-bg: #e2dfe5;
-  --color-surface: #ffffff;
-  --color-border: #e2e8f0;
+  --color-bg: #2e2b31;
+  --color-surface: #201e1e;
+  --color-border: #545555;
 
   /* --- Spacing --- */
   --space-xs: 0.25rem;
@@ -42,8 +42,8 @@
   --font-weight-bold: 600;
 
   /* --- Shadows --- */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-sm: 0 1px 2px rgba(226, 226, 226, 0.06);
+  --shadow-md: 0 4px 12px rgba(226, 226, 226, 0.08);
 
   /* --- Transition --- */
   --transition-fast: 150ms ease;
@@ -60,6 +60,7 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   background: var(--color-bg);
+  color: var(--color-text);
 }
 
 * {

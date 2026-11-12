@@ -5,7 +5,9 @@
 	align-items: center;
 	justify-content: space-between;
 	font-size: var(--font-size-md4);
-	padding: var(--space-lg);
+	padding-inline: var(--space-xl);
+	padding-block: var(--space-lg);
+	border-radius: var(--radius-full);
 }
 
 .headerBrand {
