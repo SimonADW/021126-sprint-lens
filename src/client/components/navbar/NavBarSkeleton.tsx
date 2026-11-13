@@ -11,6 +11,7 @@ function NavBarSkeleton() {
 			<div className={styles.linkWrapper}>
 				<div className={`${styles.linkSkeleton} skeleton`}></div>
 				<div className={`${styles.linkSkeleton} skeleton`}></div>
+				<div className={`${styles.linkSkeleton} skeleton`}></div>
 			</div>
 		</header>
 	);

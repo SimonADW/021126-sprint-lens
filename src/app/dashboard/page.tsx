@@ -15,7 +15,7 @@ async function DashboardPage() {
 	const session = await auth0.getSession();
 	if (!session) redirect("/auth/login");
 
-	const nameFromEmail = (session.user.email).split("@").slice(0, 1)
+	const nameFromEmail = session.user.email.split("@").slice(0, 1);
 	return (
 		<>
 			<section className={styles.dashboard}>
@@ -30,30 +30,27 @@ async function DashboardPage() {
 					</div>
 					<div>
 						<h1>
-							Welcome{" "}
-							{session.user.given_name || nameFromEmail}
+							Welcome {session.user.given_name || nameFromEmail}
 						</h1>
 						<p>Here&apos;s todays Lens 🔍</p>
 					</div>
 				</div>
 
 				<div className={styles.dashboardContent}>
-					{/* Extract to components */}
-					<Suspense fallback={<CardSkeleton featured/>}>
-						<Card featured icon={<Glasses color="var(--color-success)" />}>
-							<GlanseDash />
-						</Card>
-					</Suspense>
+					<Card
+						featured
+						icon={<Glasses color="var(--color-success)" />}
+					>
+						<GlanseDash />
+					</Card>
 
-					<Suspense fallback={<CardSkeleton />}>
-						<Card
-							icon={
-								<TriangleAlertIcon color="var(--color-warning)" />
-							}
-						>
-							<AttentionDash />
-						</Card>
-					</Suspense>
+					<Card
+						icon={
+							<TriangleAlertIcon color="var(--color-warning)" />
+						}
+					>
+						<AttentionDash />
+					</Card>
 
 					<Suspense fallback={<CardSkeleton />}>
 						<Card icon={<UserGroup color="var(--color-info)" />}>

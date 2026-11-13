@@ -1,0 +1,12 @@
+.glanseList {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-md);
+	color: var(--color-text-muted);
+
+}
+
+.cardRow {
+	display: flex;
+	justify-content: space-between;
+}

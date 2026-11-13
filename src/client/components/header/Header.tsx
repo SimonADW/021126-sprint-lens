@@ -6,6 +6,7 @@ import NavBarSkeleton from "../NavBar/NavBarSkeleton";
 import { Suspense } from "react";
 import Button from "../Button/Button";
 import { Roboto } from 'next/font/google'
+import ListItemSkeleton from "../Skeletons/ListItemSkeleton";
 
 const roboto = Roboto({
   weight: '400',
